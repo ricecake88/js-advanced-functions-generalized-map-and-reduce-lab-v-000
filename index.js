@@ -11,7 +11,7 @@ function reduce(sourceArray, reduceFunction, startValue=0) {
   let result = (startValue) ? startValue : sourceArray[0];
   let i = (startValue) ? 1: 0;
   for (let j = i; j < sourceArray.length; j++) {
-      result = reduceFunction(sourceArray[j], startValue);
+      result = reduceFunction(sourceArray[j], result);
   }
   return result;
 }
