@@ -9,6 +9,7 @@ function map(sourceArray, mapFunction) {
 
 function reduce(sourceArray, reduceFunction, startValue=0) {
   let result = (startValue) ? startValue : sourceArray[0];
+  let i = (startValue) ? 1: 0;
   for (let i = 0; i < sourceArray.length; i++) {
       result = reduceFunction(sourceArray[i], startValue);
   }
